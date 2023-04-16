@@ -1,6 +1,10 @@
 #ifndef HUD_H
 #define HUD_H
 
+#ifdef WIN32
+#include <windows.h>
+#endif
+
 #include <godot_cpp/classes/button.hpp>
 #include <godot_cpp/classes/canvas_layer.hpp>
 #include <godot_cpp/godot.hpp>

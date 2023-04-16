@@ -3,8 +3,6 @@
 #include <godot_cpp/variant/utility_functions.hpp>
 #include <godot_cpp/classes/engine.hpp>
 
-#define IS_EDITOR() godot::Engine::get_singleton()->is_editor_hint();
-
 void Player::_bind_methods()
 {
     godot::ClassDB::bind_method(godot::D_METHOD("get_animated_sprite"), &Player::get_animated_sprite);

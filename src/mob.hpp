@@ -1,6 +1,10 @@
 #ifndef MOB_H
 #define MOB_H
 
+#ifdef WIN32
+#include <windows.h>
+#endif
+
 #include <godot_cpp/classes/animated_sprite2d.hpp>
 #include <godot_cpp/godot.hpp>
 #include <godot_cpp/classes/rigid_body2d.hpp>

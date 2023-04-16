@@ -41,13 +41,13 @@ void Main::_bind_methods()
     // godot::Timer *_start_timer;
 
     ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "mob_scene", godot::PROPERTY_HINT_RESOURCE_TYPE, "PackedScene"), "set_mob_scene", "get_mob_scene");
-    ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "hud", godot::PROPERTY_HINT_NODE_TYPE, "PackedScene"), "set_hud", "get_hud");
-    ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "player", godot::PROPERTY_HINT_NODE_TYPE, "PackedScene"), "set_player", "get_player");
-    ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "start_position", godot::PROPERTY_HINT_NODE_TYPE, "PackedScene"), "set_start_position", "get_start_position");
-    ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "mob_spawn_location", godot::PROPERTY_HINT_NODE_TYPE, "PackedScene"), "set_mob_spawn_location", "get_mob_spawn_location");
-    ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "mob_timer", godot::PROPERTY_HINT_NODE_TYPE, "PackedScene"), "set_mob_timer", "get_mob_timer");
-    ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "score_timer", godot::PROPERTY_HINT_NODE_TYPE, "PackedScene"), "set_score_timer", "get_score_timer");
-    ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "start_timer", godot::PROPERTY_HINT_NODE_TYPE, "PackedScene"), "set_start_timer", "get_start_timer");
+    // ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "hud", godot::PROPERTY_HINT_NODE_TYPE, "CanvasLayer"), "set_hud", "get_hud");
+    // ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "player", godot::PROPERTY_HINT_NODE_TYPE, "Area2D"), "set_player", "get_player");
+    // ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "start_position", godot::PROPERTY_HINT_NODE_TYPE, "Node2D"), "set_start_position", "get_start_position");
+    // ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "mob_spawn_location", godot::PROPERTY_HINT_NODE_TYPE, "PathFollow2D"), "set_mob_spawn_location", "get_mob_spawn_location");
+    // ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "mob_timer", godot::PROPERTY_HINT_NODE_TYPE, "Timer"), "set_mob_timer", "get_mob_timer");
+    // ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "score_timer", godot::PROPERTY_HINT_NODE_TYPE, "Timer"), "set_score_timer", "get_score_timer");
+    // ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "start_timer", godot::PROPERTY_HINT_NODE_TYPE, "Timer"), "set_start_timer", "get_start_timer");
 }
 
 void Main::_ready()
@@ -55,13 +55,13 @@ void Main::_ready()
     if (godot::Engine::get_singleton()->is_editor_hint())
         return;
 
-    // _hud = get_node<HUD>("HUD");
-    // _player = get_node<Player>("Player");
-    // _start_position = get_node<godot::Node2D>("StartPosition");
-    // _mob_spawn_location = get_node<godot::PathFollow2D>("MobPath/MobSpawnLocation");
-    // _mob_timer = get_node<godot::Timer>("MobTimer");
-    // _score_timer = get_node<godot::Timer>("ScoreTimer");
-    // _start_timer = get_node<godot::Timer>("StartTimer");
+    _hud = get_node<HUD>("HUD");
+    _player = get_node<Player>("Player");
+    _start_position = get_node<godot::Node2D>("StartPosition");
+    _mob_spawn_location = get_node<godot::PathFollow2D>("MobPath/MobSpawnLocation");
+    _mob_timer = get_node<godot::Timer>("MobTimer");
+    _score_timer = get_node<godot::Timer>("ScoreTimer");
+    _start_timer = get_node<godot::Timer>("StartTimer");
 
     // Uncomment these after adding the nodes in the "Sound effects" section of "Finishing up".
     //_music = get_node<godot::AudioStreamPlayer>("Music");

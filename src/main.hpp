@@ -1,6 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#ifdef WIN32
+#include <windows.h>
+#endif
+
 #include <godot_cpp/classes/audio_stream_player.hpp>
 #include <godot_cpp/classes/canvas_layer.hpp>
 #include <godot_cpp/godot.hpp>
