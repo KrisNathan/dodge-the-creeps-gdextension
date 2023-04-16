@@ -7,6 +7,9 @@
 #include <godot_cpp/godot.hpp>
 
 #include "player.hpp"
+#include "mob.hpp"
+#include "main.hpp"
+#include "hud.hpp"
 
 using namespace godot;
 
@@ -16,6 +19,9 @@ void init_mod(ModuleInitializationLevel p_level)
         return;
 
     ClassDB::register_class<Player>();
+    ClassDB::register_class<Mob>();
+    ClassDB::register_class<HUD>();
+    ClassDB::register_class<Main>();
 }
 
 void uninit_mod(ModuleInitializationLevel p_level)

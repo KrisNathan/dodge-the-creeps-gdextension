@@ -14,11 +14,6 @@ void Player::_bind_methods()
 
     ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "animated_sprite", godot::PROPERTY_HINT_NODE_TYPE, "AnimatedSprite2D"), "set_animated_sprite", "get_animated_sprite");
     ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "collision_shape", godot::PROPERTY_HINT_NODE_TYPE, "CollisionShape2D"), "set_collision_shape", "get_collision_shape");
-
-    // godot::ClassDB::add_property("Player", godot::PropertyInfo(godot::Variant::NODE_PATH, "animated_sprite"), "set_animated_sprite", "get_animated_sprite");
-    // godot::ClassDB::add_property("Player", godot::PropertyInfo(godot::Variant::NODE_PATH, "collision_shape"), "set_collision_shape", "get_collision_shape");
-
-    // ADD_PROPERTY(PropertyInfo(Variant::VECTOR2, "group_subgroup_custom_position"), "set_custom_position", "get_custom_position");
 }
 
 void Player::_ready()
@@ -38,7 +33,7 @@ void Player::_process(const double p_delta)
 {
     if (godot::Engine::get_singleton()->is_editor_hint())
         return;
-
+        
     godot::Vector2 velocity(0, 0);
 
     velocity.x = _input_object->get_action_strength("move_right") - _input_object->get_action_strength("move_left");
