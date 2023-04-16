@@ -45,9 +45,9 @@ public:
     void _ready();
     void game_over();
     void new_game();
-    void _on_MobTimer_timeout();
-    void _on_ScoreTimer_timeout();
-    void _on_StartTimer_timeout();
+    void on_MobTimer_timeout();
+    void on_ScoreTimer_timeout();
+    void on_StartTimer_timeout();
     void set_mob_scene(godot::Ref<godot::PackedScene> mob_scene);
     godot::Ref<godot::PackedScene> get_mob_scene();
 

@@ -3,6 +3,7 @@
 #include <godot_cpp/core/class_db.hpp>
 #include <godot_cpp/classes/engine.hpp>
 #include <godot_cpp/variant/utility_functions.hpp>
+#include <cstdio>
 
 void HUD::_ready()
 {
@@ -37,7 +38,11 @@ void HUD::show_game_over()
 
 void HUD::update_score(const int p_score)
 {
-    _score_label->set_text(godot::Variant(p_score));
+    // _score_label->set_text(godot::Variant(p_score)); // PROBLEMATIC
+    // https://github.com/godotengine/godot/issues/75757
+    char str[32];
+    std::snprintf(str, 16, "%d", p_score);
+    _score_label->set_text(str);
 }
 
 void HUD::_on_StartButton_pressed()

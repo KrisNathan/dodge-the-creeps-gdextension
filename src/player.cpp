@@ -5,13 +5,13 @@
 
 void Player::_bind_methods()
 {
-    godot::ClassDB::bind_method(godot::D_METHOD("get_animated_sprite"), &Player::get_animated_sprite);
-    godot::ClassDB::bind_method(godot::D_METHOD("set_animated_sprite", "animated_sprite"), &Player::set_animated_sprite);
-    godot::ClassDB::bind_method(godot::D_METHOD("get_collision_shape"), &Player::get_collision_shape);
-    godot::ClassDB::bind_method(godot::D_METHOD("set_collision_shape", "collision_shape"), &Player::set_collision_shape);
+    // godot::ClassDB::bind_method(godot::D_METHOD("get_animated_sprite"), &Player::get_animated_sprite);
+    // godot::ClassDB::bind_method(godot::D_METHOD("set_animated_sprite", "animated_sprite"), &Player::set_animated_sprite);
+    // godot::ClassDB::bind_method(godot::D_METHOD("get_collision_shape"), &Player::get_collision_shape);
+    // godot::ClassDB::bind_method(godot::D_METHOD("set_collision_shape", "collision_shape"), &Player::set_collision_shape);
 
-    ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "animated_sprite", godot::PROPERTY_HINT_NODE_TYPE, "AnimatedSprite2D"), "set_animated_sprite", "get_animated_sprite");
-    ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "collision_shape", godot::PROPERTY_HINT_NODE_TYPE, "CollisionShape2D"), "set_collision_shape", "get_collision_shape");
+    // ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "animated_sprite", godot::PROPERTY_HINT_NODE_TYPE, "AnimatedSprite2D"), "set_animated_sprite", "get_animated_sprite");
+    // ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "collision_shape", godot::PROPERTY_HINT_NODE_TYPE, "CollisionShape2D"), "set_collision_shape", "get_collision_shape");
 }
 
 void Player::_ready()
@@ -19,8 +19,8 @@ void Player::_ready()
     if (godot::Engine::get_singleton()->is_editor_hint())
         return;
 
-    // animated_sprite = get_node<godot::AnimatedSprite2D>("AnimatedSprite2D");
-    // collision_shape = get_node<godot::CollisionShape2D>("CollisionShape2D");
+    animated_sprite = get_node<godot::AnimatedSprite2D>("AnimatedSprite2D");
+    collision_shape = get_node<godot::CollisionShape2D>("CollisionShape2D");
     _input_object = godot::Input::get_singleton();
     _screen_size = get_viewport_rect().size;
 
