@@ -21,6 +21,8 @@ void Mob::_ready() {
 
     godot::VisibleOnScreenNotifier2D *vos_notif = get_node<godot::VisibleOnScreenNotifier2D>("VisibleOnScreenNotifier2D");
     vos_notif->connect("screen_exited", godot::Callable(this, "on_VisibleOnScreenNotifier2D_screen_exited"));
+
+    add_to_group("mobs");
 }
 
 void Mob::on_VisibleOnScreenNotifier2D_screen_exited() {
