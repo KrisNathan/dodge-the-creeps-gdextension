@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c582pk5whdr5n"]
+
+[node name="ExportsNode" type="ExportsNode" node_paths=PackedStringArray("node_a", "node_b")]
+node_a = NodePath("Node2D")
+node_b = NodePath("Node")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Node" type="Node" parent="."]
