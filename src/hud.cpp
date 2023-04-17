@@ -3,7 +3,6 @@
 #include <cstdio>
 #include <godot_cpp/classes/engine.hpp>
 #include <godot_cpp/core/class_db.hpp>
-#include <godot_cpp/variant/utility_functions.hpp>
 
 void HUD::_ready() {
   if (IS_EDITOR())
@@ -79,19 +78,4 @@ void HUD::_bind_methods() {
       godot::D_METHOD("_on_GetReadyMessageTimer_timeout"),
       &HUD::_on_GetReadyMessageTimer_timeout);
   ADD_SIGNAL(godot::MethodInfo("start_game"));
-
-  // ADD_SIGNAL(MethodInfo("custom_signal", PropertyInfo(Variant::STRING,
-  // "name"), PropertyInfo(Variant::INT, "value")));
-
-  // godot::register_method("_ready", &HUD::_ready);
-  // godot::register_method("show_get_ready", &HUD::show_get_ready);
-  // godot::register_method("show_game_over", &HUD::show_game_over);
-  // godot::register_method("update_score", &HUD::update_score);
-  // godot::register_method("_on_StartButton_pressed",
-  // &HUD::_on_StartButton_pressed);
-  // godot::register_method("_on_StartMessageTimer_timeout",
-  // &HUD::_on_StartMessageTimer_timeout);
-  // godot::register_method("_on_GetReadyMessageTimer_timeout",
-  // &HUD::_on_GetReadyMessageTimer_timeout);
-  // godot::register_signal<HUD>("start_game", godot::Dictionary());
 }

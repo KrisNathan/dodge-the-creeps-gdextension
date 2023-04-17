@@ -50,21 +50,6 @@ public:
   void on_StartTimer_timeout();
   void set_mob_scene(godot::Ref<godot::PackedScene> mob_scene);
   godot::Ref<godot::PackedScene> get_mob_scene();
-
-  void set_hud(HUD *hud);
-  HUD *get_hud();
-  void set_player(Player *player);
-  Player *get_player();
-  void set_start_position(godot::Node2D *start_position);
-  godot::Node2D *get_start_position();
-  void set_mob_spawn_location(godot::PathFollow2D *mob_spawn_location);
-  godot::PathFollow2D *get_mob_spawn_location();
-  void set_mob_timer(godot::Timer *mob_timer);
-  godot::Timer *get_mob_timer();
-  void set_score_timer(godot::Timer *score_timer);
-  godot::Timer *get_score_timer();
-  void set_start_timer(godot::Timer *start_timer);
-  godot::Timer *get_start_timer();
 };
 
 #endif // MAIN_H

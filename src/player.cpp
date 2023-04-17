@@ -1,27 +1,10 @@
 #include "player.hpp"
 
 #include <godot_cpp/classes/engine.hpp>
-#include <godot_cpp/variant/utility_functions.hpp>
 
 void Player::_bind_methods() {
   godot::ClassDB::bind_method(godot::D_METHOD("on_body_entered", "body"),
                               &Player::on_body_entered);
-
-  // godot::ClassDB::bind_method(godot::D_METHOD("get_animated_sprite"),
-  // &Player::get_animated_sprite);
-  // godot::ClassDB::bind_method(godot::D_METHOD("set_animated_sprite",
-  // "animated_sprite"), &Player::set_animated_sprite);
-  // godot::ClassDB::bind_method(godot::D_METHOD("get_collision_shape"),
-  // &Player::get_collision_shape);
-  // godot::ClassDB::bind_method(godot::D_METHOD("set_collision_shape",
-  // "collision_shape"), &Player::set_collision_shape);
-
-  // ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "animated_sprite",
-  // godot::PROPERTY_HINT_NODE_TYPE, "AnimatedSprite2D"), "set_animated_sprite",
-  // "get_animated_sprite");
-  // ADD_PROPERTY(godot::PropertyInfo(godot::Variant::OBJECT, "collision_shape",
-  // godot::PROPERTY_HINT_NODE_TYPE, "CollisionShape2D"), "set_collision_shape",
-  // "get_collision_shape");
 
   ADD_SIGNAL(godot::MethodInfo("hit"));
 }
@@ -88,19 +71,3 @@ void Player::start(const godot::Vector2 p_position) {
   show();
   collision_shape->set_disabled(false);
 }
-
-void Player::set_collision_shape(godot::CollisionShape2D *new_collision_shape) {
-  collision_shape = new_collision_shape;
-};
-
-godot::CollisionShape2D *Player::get_collision_shape() {
-  return collision_shape;
-};
-
-void Player::set_animated_sprite(godot::AnimatedSprite2D *new_animated_sprite) {
-  animated_sprite = new_animated_sprite;
-};
-
-godot::AnimatedSprite2D *Player::get_animated_sprite() {
-  return animated_sprite;
-};

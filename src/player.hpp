@@ -33,12 +33,6 @@ public:
   void _process(const double p_delta);
   void start(const godot::Vector2 p_position);
   void on_body_entered(godot::Node2D *_body);
-
-  void set_collision_shape(godot::CollisionShape2D *collision_shape);
-  godot::CollisionShape2D *get_collision_shape();
-
-  void set_animated_sprite(godot::AnimatedSprite2D *animated_sprite);
-  godot::AnimatedSprite2D *get_animated_sprite();
 };
 
 #endif // PLAYER_H
