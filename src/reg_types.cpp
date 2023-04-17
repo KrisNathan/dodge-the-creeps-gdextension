@@ -10,6 +10,7 @@
 #include "mob.hpp"
 #include "main.hpp"
 #include "hud.hpp"
+#include "exports_node.hpp"
 
 using namespace godot;
 
@@ -22,6 +23,7 @@ void init_mod(ModuleInitializationLevel p_level)
     ClassDB::register_class<Mob>();
     ClassDB::register_class<HUD>();
     ClassDB::register_class<Main>();
+    ClassDB::register_class<ExportsNode>();
 }
 
 void uninit_mod(ModuleInitializationLevel p_level)
