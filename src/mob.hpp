@@ -21,7 +21,7 @@ protected:
 public:
     void _init() {}
     void _ready();
-    void _on_VisibleOnScreenNotifier2D_screen_exited();
+    void on_VisibleOnScreenNotifier2D_screen_exited();
 };
 
 #endif // MOB_H

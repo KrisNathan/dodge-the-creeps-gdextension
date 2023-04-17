@@ -35,6 +35,7 @@ public:
     void _on_StartButton_pressed();
     void _on_StartMessageTimer_timeout();
     void _on_GetReadyMessageTimer_timeout();
+    void _on_StartButtonTimer_timeout();
 };
 
 #endif // HUD_H

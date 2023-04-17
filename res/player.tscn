@@ -34,9 +34,7 @@ animations = [{
 radius = 27.0
 height = 68.0
 
-[node name="Player" type="Player" node_paths=PackedStringArray("animated_sprite", "collision_shape")]
-animated_sprite = NodePath("AnimatedSprite2D")
-collision_shape = NodePath("CollisionShape2D")
+[node name="Player" type="Player"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
