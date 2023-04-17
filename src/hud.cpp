@@ -6,7 +6,7 @@
 #include <godot_cpp/variant/utility_functions.hpp>
 
 void HUD::_ready() {
-  if (godot::Engine::get_singleton()->is_editor_hint())
+  if (IS_EDITOR())
     return;
 
   _score_label = get_node<godot::Label>("ScoreLabel");

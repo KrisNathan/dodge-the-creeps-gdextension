@@ -11,6 +11,8 @@
 #include <godot_cpp/classes/input.hpp>
 #include <godot_cpp/godot.hpp>
 
+#include "is_editor.hpp"
+
 class Player : public godot::Area2D {
   GDCLASS(Player, godot::Area2D);
 

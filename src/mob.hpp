@@ -9,6 +9,8 @@
 #include <godot_cpp/godot.hpp>
 #include <godot_cpp/classes/rigid_body2d.hpp>
 
+#include "is_editor.hpp"
+
 class Mob : public godot::RigidBody2D
 {
     GDCLASS(Mob, godot::RigidBody2D);

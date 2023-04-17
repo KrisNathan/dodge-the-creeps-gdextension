@@ -77,8 +77,7 @@ void Main::_bind_methods() {
 }
 
 void Main::_ready() {
-  godot::UtilityFunctions::print("Main::_ready");
-  if (godot::Engine::get_singleton()->is_editor_hint())
+  if (IS_EDITOR())
     return;
 
   _hud = get_node<HUD>("HUD");

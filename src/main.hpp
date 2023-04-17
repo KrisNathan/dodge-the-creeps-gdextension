@@ -16,6 +16,7 @@
 
 #include "hud.hpp"
 #include "player.hpp"
+#include "is_editor.hpp"
 
 class Main : public godot::Node {
   GDCLASS(Main, godot::Node);

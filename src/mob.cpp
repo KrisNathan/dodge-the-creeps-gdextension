@@ -10,7 +10,7 @@ void Mob::_bind_methods() {
 }
 
 void Mob::_ready() {
-    if (godot::Engine::get_singleton()->is_editor_hint())
+    if (IS_EDITOR())
         return;
     
     godot::Ref<godot::RandomNumberGenerator> random(memnew(godot::RandomNumberGenerator));
@@ -24,8 +24,5 @@ void Mob::_ready() {
 }
 
 void Mob::on_VisibleOnScreenNotifier2D_screen_exited() {
-    if (godot::Engine::get_singleton()->is_editor_hint())
-        return;
-    
     queue_free();
 }

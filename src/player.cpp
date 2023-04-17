@@ -27,7 +27,7 @@ void Player::_bind_methods() {
 }
 
 void Player::_ready() {
-  if (godot::Engine::get_singleton()->is_editor_hint())
+  if (IS_EDITOR())
     return;
 
   animated_sprite = get_node<godot::AnimatedSprite2D>("AnimatedSprite2D");
@@ -41,7 +41,7 @@ void Player::_ready() {
 }
 
 void Player::_process(const double p_delta) {
-  if (godot::Engine::get_singleton()->is_editor_hint())
+  if (IS_EDITOR())
     return;
 
   godot::Vector2 velocity(0, 0);
@@ -76,9 +76,6 @@ void Player::_process(const double p_delta) {
 }
 
 void Player::on_body_entered(godot::Node2D *_body) {
-  if (godot::Engine::get_singleton()->is_editor_hint())
-    return;
-
   hide(); // Player disappears after being hit.
   emit_signal("hit");
   // Must be deferred as we can't change physics properties on a physics

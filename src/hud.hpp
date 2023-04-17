@@ -11,6 +11,8 @@
 #include <godot_cpp/classes/label.hpp>
 #include <godot_cpp/classes/timer.hpp>
 
+#include "is_editor.hpp"
+
 class HUD : public godot::CanvasLayer
 {
     GDCLASS(HUD, godot::CanvasLayer);
